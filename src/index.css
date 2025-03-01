@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #006400;
+  --light-green: #008000;
+  --dark-green: #004d00;
+  --pure-white: #ffffff;
+  --off-white: #f8f8f8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--pure-white);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.crypto-ticker {
+  background: linear-gradient(90deg, var(--dark-green), var(--primary-green), var(--light-green));
+  background-size: 200% 100%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, var(--light-green) 0%, var(--primary-green) 50%, var(--dark-green) 100%);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-green) !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-green) !important;
+}
